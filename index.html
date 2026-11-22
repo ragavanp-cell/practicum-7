@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TrainSphere - Responsive Grid Gallery</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #eef3f9;
+        }
+ 
+        header {
+            background-color: #1e4b8f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h2 {
+            color: #1e4b8f;
+            text-align: center;
+        }
+
+        .description {
+            text-align: center;
+            font-size: 16px;
+            margin: 20px;
+        }
+
+        /* CSS Grid Layout */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .card h3 {
+            color: #1e4b8f;
+        }
+
+        .card p {
+            padding: 0 10px 10px;
+        }
+
+        footer {
+            background-color: #1e4b8f;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+        }
+
+        /* Tablet View */
+        @media screen and (max-width: 900px) {
+            .gallery {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        /* Mobile View */
+        @media screen and (max-width: 600px) {
+            body {
+                padding: 10px;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                padding: 10px;
+            }
+
+            .card img {
+                height: 220px;
+            }
+
+            header h1 {
+                font-size: 24px;
+            }
+
+            .description {
+                font-size: 14px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>TrainSphere</h1>
+        <p>Corporate Training and Workshops</p>
+    </header>
+
+    <h2>Our Training Programs</h2>
+
+    <p class="description">
+        TrainSphere provides high-impact corporate training,
+        hands-on workshops, and workforce upskilling programs.
+    </p>
+
+    <div class="gallery">
+
+        <div class="card">
+            <img src="leadership_workshop.jpg" height="200" width="300"
+                 alt="Corporate leadership coaching workshop">
+            <h3>Leadership Training</h3>
+            <p>Executive coaching and strategic management for modern leaders.</p>
+        </div>
+
+        <div class="card">
+            <img src="agile_bootcamp.jpg" height="200" width="300"
+                 alt="Team collaborating in an Agile workshop">
+            <h3>Agile &amp; Scrum</h3>
+            <p>Hands-on sprint planning and agile project delivery bootcamps.</p>
+        </div>
+
+        <div class="card">
+            <img src="ai_analytics_lab.jpg" height="200" width="300"
+                 alt="Data analytics and AI training session">
+            <h3>AI &amp; Data Labs</h3>
+            <p>Practical enterprise AI and business analytics upskilling.</p>
+        </div>
+
+        <div class="card">
+            <img src="communication_seminar.jpg" height="200" width="300"
+                 alt="Corporate communication and teamwork workshop">
+            <h3>Corporate Communication</h3>
+            <p>Effective presentation, negotiation, and team collaboration skills.</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 TrainSphere | Empowering Workforce Excellence</p>
+    </footer>
+
+</body>
+</html>
